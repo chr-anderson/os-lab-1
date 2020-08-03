@@ -3,7 +3,7 @@
 
 ## Contents
 
-* **interference_intensity_profiles:** Contains intensity data exported from OpticStudio and a Jupyter notebook to plot this data with Python.
+* **interference_intensity_profiles:** Contains intensity data exported from OpticStudio and a Jupyter notebook to plot this data in Python.
   * **DoubleData.txt:** The intensity at each pixel on the detector (401 x 401 pixels) for the double-slit arrangement.
   * **MultipleData.txt:** The intensity at each pixel on the detector (401 x 401 pixels) for the quadruple-slit arrangement.
   * **InterferencePatterns.ipynb:** A Jupyter notebook that reads the intensity data and plots the intensity of each pixel that's located at y = 201.
