@@ -47,14 +47,14 @@ if TheSystem is None:
 
 def reshape(self, data, x, y, transpose = False):
     """Converts a System.Double[,] to a 2D list for plotting or post processing
-    
+
     Parameters
     ----------
-    data      : System.Double[,] data directly from ZOS-API 
+    data      : System.Double[,] data directly from ZOS-API
     x         : x width of new 2D list [use var.GetLength(0) for dimension]
     y         : y width of new 2D list [use var.GetLength(1) for dimension]
     transpose : transposes data; needed for some multi-dimensional line series data
-    
+
     Returns
     -------
     res       : 2D list; can be directly used with Matplotlib or converted to
@@ -68,16 +68,16 @@ def reshape(self, data, x, y, transpose = False):
     if transpose:
         return self.transpose(res);
     return res
-    
+
 def transpose(self, data):
-    """Transposes a 2D list (Python3.x or greater).  
-    
+    """Transposes a 2D list (Python3.x or greater).
+
     Useful for converting mutli-dimensional line series (i.e. FFT PSF)
-    
+
     Parameters
     ----------
-    data      : Python native list (if using System.Data[,] object reshape first)    
-    
+    data      : Python native list (if using System.Data[,] object reshape first)
+
     Returns
     -------
     res       : transposed 2D list
@@ -93,7 +93,7 @@ print('Serial #: ', TheApplication.SerialCode)
 
 # Start and save a new project file at the specified filepath
 TheSystem.New(False)
-fileOut = "C:/Users/Student/Documents/UO/PHYS628/OpticStudio1/APISinglet.zmx"
+fileOut = '<save directory here>/APISinglet.zmx'
 TheSystem.SaveAs(fileOut)
 
 # Accessing system explorer data
@@ -183,7 +183,3 @@ print("Optimized!")
 # Save and disconnect
 TheSystem.Save()
 TheApplication.CloseApplication()
-
-
-
-
